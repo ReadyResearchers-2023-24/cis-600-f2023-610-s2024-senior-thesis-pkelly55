@@ -75,7 +75,7 @@ Direct any questions about issues to your first reader.
 
 # Introduction
 
-This chapter describes your completed senior thesis work,
+This is my first edit. This chapter describes your completed senior thesis work,
 including the overall aims  and the background motivating your research. Whenever
 possible, you should use one or more concrete examples and technical diagrams.
 
