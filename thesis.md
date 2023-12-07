@@ -75,7 +75,7 @@ Direct any questions about issues to your first reader.
 
 # Introduction
 
-This is my first edit. This chapter describes your completed senior thesis work,
+This is my first edit. My project is IPLOCK a framework for site security protecting against hackers and bots. This chapter describes your completed senior thesis work,
 including the overall aims  and the background motivating your research. Whenever
 possible, you should use one or more concrete examples and technical diagrams.
 
@@ -86,6 +86,8 @@ introductory text into sections in another way.
 The headings below propose _one way_ you might structure this section of the document.
 
 ## Motivation
+
+I am motivated. This section should describe the problem you are trying to solve.  
 
 ## Current State of the Art
 
