@@ -51,7 +51,7 @@ The value my work adds to the field lies in its comprehensive exploration of Dja
 
 ## Ethical Implications
 
-+ Blacklisting IP addresses is a common security practice employed to block access from specific addresses due to various security concerns. However, like any security measure, this approach raises ethical considerations that necessitate careful attention:
+Blacklisting IP addresses is a common security practice employed to block access from specific addresses due to various security concerns. However, like any security measure, this approach raises ethical considerations that necessitate careful attention:
 
 1. Accuracy and Fairness:
 There is a potential risk of falsely identifying legitimate users as malicious and subsequently blocking their access. This could lead to a denial of service for innocent users. Implement measures to ensure the accuracy of the blacklisting criteria. Regularly review and update the criteria to minimize the chances of false positives.
@@ -79,7 +79,7 @@ Addressing the potential misuse of the system is a critical ethical consideratio
 + Second-Party Risk of the System:
 Acknowledging the risk that the system itself poses to second parties is an ethical imperative. This involves recognizing potential negative impacts on users, entities, or systems indirectly affected by the project. Mitigation strategies should be in place to minimize such risks, and continuous monitoring and adaptation of the system should occur to address any unforeseen consequences.
 
-Mitigation Strategies:
+### Mitigation Strategies
 
 Transparency is a cornerstone of ethical practices, and Django provides robust tools to achieve this. Through the Django Admin Interface, a responsible system administrator can customize panels to offer a transparent view of the data collected and stored. Additionally, the templating system enables the incorporation of user-facing notices within the web application, ensuring clear communication of the project's purpose, data usage policies, and potential risks.
 
@@ -95,14 +95,30 @@ In summary, Django, when coupled with the oversight of a responsible system admi
 
 # Related work
 
-This chapter includes a broad and detailed review of relevant existing work.
-The literature review should provide background and context for the thesis work.
-The subsections may be organized in whatever manner seems best suited to the material--
-chronological, or by topic, or according to some other criteria
-(e.g., primary versus secondary resources).
+My related works chapter will cover the folowing project of Stegnography and the encryption of data in images, Django Framework, projects and other github repositories that have helped me construct my project, and the different ways that people can protect themselves from the threats that are out there. It will also include a look at the use of historical databases used for internet location, a good start when understanding the data involved in this project.
+Steganography based system or hiding sensitive data.
+[@Shewale_Salunke_Deshmukh_Kapnure_Kalunge_2023]
+This chapter will also provide a explaination of Django Globus, a Modern Research Data Portal. By my research into This will be used to show how Django can be used to build a secure site administration for those who do have any source of security. This will be done by using the tools that Django provides in working with the admin site and its built in database models. By building a system that would allow a company to put their site behind a login page, this would allow them to protect their site from brute force attacks. Django is an easy to use web framework in Python to connect all the web pages together. The justification for using Django in building a secure site administration becomes evident in light of the challenges posed by the asymmetry of knowledge between attackers and users/identity providers.The proposed privacy-preserving protocol outlined in the text aligns the project objectives. By allowing a client (end user, password manager, or identity provider) to query a centralized breach repository without revealing sensitive information, your system mirrors the need for a secure framework. Django's tools, especially its built-in admin site and database models, can play a pivotal role in implementing such a protocol.
+Another paper will be on D4I, the digital forensics framework for reviewing and investigating cyber attacks. Learning about the lifecycle once an attack has happened is important to know while devoloping because there has to be a clear line of communication and find the datastream responsible or pertinant imformation about the attacks. It covers the questions to ask and how to handle the advanced persistent Threat groups by knowing the network and services to understand the traffic for the ability to notice abnomalities in the network.[DIMITRIADIS2020100015] The  proposed framework explains that Cyber Kill Chain (CKC) is an intelligence-driven model proposed by Lockheed Martin to be followed in the identification and prevention of cyber-attacks.[@hutchins2011intelligence] It adapts the United States military’s kill chain process to the digital era to describe the following phases the adversaries pass through to achieve their objectives :
 
-If ethical issues are central to this work, you should also address historical and
-contemporary issues or efforts made to address them.
++ Reconnaissance (R): Attackers usually scan the internet to find, identify, choose and gather information about their target.
+
++ Weaponization (W): An apparently legitimate file to be sent to the target is developed. This file is used to infect the target by a payload (malicious code) tailored to one or more vulnerabilities.
+
++ Delivery (D): The attacker sends the above file to the target.
+
++ Exploitation (E): The payload is executed by exploiting vulnerabilities in the operating system or the installed applications.
+
++ Installation (I): The payload is installed in a specific location in the victim’s system to grant permanent existence (persistence)
+
++ Command and Control (C2): The payload establishes a covert communication channel (e.g. using DNS queries) with its creator to gain access to the target.
+
++ Actions on Objective (A): Attackers accomplish their objectives.
+[@hutchins2011intelligence]
+This pipeline of actions that are carried out during an executed attack are valueable in understanding how vunerabilities are taken advantage of. 
+
+In related works, I found the paper on Django Globus which is helpful to understanding the integration of authorization in django. When a user is looking for information on the portal it authenticates based on the user token to check if that file is available to view. This project inspired me to look in [@10.1145/3569951.3593597]
+Another question I had with this project was how to base my project on data, I found and continue to conduct research on the use of a historical Database with IP addresses from all over. By using this to compare with the IP addresses that are trying to access the site, I can compare the two and see if the IP address is a threat or not. I will mull over how to handle if it is a threat but, that purpose will be left for the user to decide. The paper explores the retrospective geolocation of IP addresses, considering the challenges posed by the ever-changing landscape of the Internet and the limited availability of historical IP location databases. The analysis spans a five-year period, encompassing both IPv4 and IPv6 addresses. To address gaps in past IP geolocation databases, the paper introduces an approach to handle missing data. The findings indicate that retrospective geolocation of IP addresses is generally reliable for a span of a couple of years. However, distinctions between IPv4 and IPv6 are observed.[@s21154975]The paper introduces a parametric model of location lifetime, enabling the estimation of the timeframe during which the location of an address changed in the past. This retrospective geolocation of IP addresses holds significance across various domains, including social studies, system analyses, and security investigations. The paper discusses two longitudinal use cases that leverage the applied results. The first focuses on geotargeted online content, while the second addresses identity theft prevention in e-commerce.The research contributes insights into the challenges and reliability of retrospective geolocation for both IPv4 and IPv6 addresses, offering a valuable parametric model for estimating historical changes in address location. The practical applications in geotargeting and identity theft prevention underscore the broader relevance of the study's findings.
 
 # Method of approach
 
