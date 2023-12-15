@@ -3,7 +3,6 @@
 The following provide a walkthrough for my project. The sections below are the motivation, current state of the art, goals of the project, and ethical implications. In is paper, will be discussing the aformenetioned topics for IPLOCK(name subject to change). IPLOCK is a program that will be a django web application that will be used to prevent brute force attacks on a server. This will be done by essentially blocking the IP address of the attacker or possible attacks. This will be done by using the django framework and the python programming language along with other tools.
 The motivation behind IPLOCK stems from the escalating threat of brute force attacks on servers, a pervasive issue that jeopardizes the security of digital systems. As technology advances, malicious actors continuously exploit vulnerabilities to gain unauthorized access. IPLOCK aims to counter this menace by developing a robust Django web application that proactively identifies and blocks potential attackers based on their IP addresses. The significance of this project lies in fortifying server defenses, thwarting unauthorized intrusion attempts, and ultimately safeguarding sensitive data from compromise.
 
-
 ## Motivation
 
 The motivation behind this project came after a long period of mulling over topics and different things that I could do for my senior thesis. After alot of consideration, I decided to do something that I have been interested in for a while. I have always been interested in cyber security and the different ways that people can protect themselves from attacks. For most of my life, I have been a football player and I played defense, so I have always been interested in the defensive side of things and keeping people out. Along with this interest, I have always been interested in the different ways that people can get into systems and the different ways that people can protect themselves from the threats that are out there. Over the summer of 2023 I gained an internship with Penncrest School District to work with their Director of Technology, System Administrator, and Information Systems Specialist. During this internship, we were taken to the NWPA Security & Technology Summit in Erie, Pennsylvania. During this summit, we heard from plenty of speakers from companies such as Huntress and Phin. One of the goals of the event was to showcase how cyber security affects all parts of an organization, from executive, finance, human resources, and technology. One of the keynote speakers spoke on the topic of stolen credentials and how they are used to gain access to systems. This was also to include the use of the dark web and how it plays a role in cyber warfare people are calling it. To be able to protect sensitive data agaist hackers and bots is a very valuable business. This is why I chose to do this project.
@@ -38,26 +37,37 @@ Web applications handle substantial amounts of personal data daily, making data 
 
 The development process in Django involves executing commands such as 'python manage.py migrate,' enabling the framework to store all changes in its database system. Views are written as Python functions, showcasing the seamless integration of Python in web development. The paper highlights the fundamental principles of web development using Django, emphasizing the implementation of CRUD functionality (Create, Read, Update, Delete) to build robust blog applications. Django, a widely adopted free and open-source web development framework, distinguishes itself by offering an array of features "out of the box," expediting the development process.[@Rajeswari_KR.Kamalam_2022] Its widespread use attests to its effectiveness in simplifying and accelerating web development tasks.
 
+My research significantly contributes to the existing body of knowledge by addressing critical gaps in the literature related to cybersecurity, particularly in the context of small businesses utilizing Django for building secure web applications. The identified gaps in the literature that my thesis addresses include:
+
+Limited Focus on Small Businesses:
+Many existing studies primarily concentrate on cybersecurity challenges faced by large enterprises, often neglecting the unique vulnerabilities and resource constraints experienced by small businesses. My research specifically targets this underrepresented sector, recognizing the distinct challenges and needs that small businesses encounter in the realm of online security.
+Insufficient Attention to Django Framework:
+While various cybersecurity studies explore general best practices and frameworks, there is a scarcity of research specifically delving into the comprehensive use of Django for building secure web applications. My thesis fills this void by providing a detailed examination of how Django, with its built-in features and tools, can be effectively employed to bolster the security posture of small business websites.
+Inadequate Exploration of System Administration Practices:
+Existing literature often lacks in-depth insights into the role of a responsible system administrator in ensuring the ethical and secure deployment of web applications. My research contributes by highlighting the ethical implications and responsibilities of a system administrator, specifically in the context of implementing security measures using Django.
+Limited Emphasis on User-Centric Security Measures:
+Many studies focus predominantly on technical aspects of cybersecurity, overlooking the importance of user-centric security measures and the ethical implications associated with user data protection. My thesis emphasizes the significance of informed consent, transparency, and user empowerment, addressing a critical aspect often marginalized in existing literature.
+The value my work adds to the field lies in its comprehensive exploration of Django's capabilities for small businesses, elucidating the ethical considerations involved in system administration, and advocating for user-centric security practices. By bridging these gaps, my research contributes not only to the academic understanding of cybersecurity but also provides practical insights for small businesses looking to secure their online presence effectively and ethically.
+
 ## Ethical Implications
 
 + Blacklisting IP addresses is a common security practice employed to block access from specific addresses due to various security concerns. However, like any security measure, this approach raises ethical considerations that necessitate careful attention:
 
 1. Accuracy and Fairness:
-Ethical Concern: There is a potential risk of falsely identifying legitimate users as malicious and subsequently blocking their access. This could lead to a denial of service for innocent users. Implement measures to ensure the accuracy of the blacklisting criteria. Regularly review and update the criteria to minimize the chances of false positives.
+There is a potential risk of falsely identifying legitimate users as malicious and subsequently blocking their access. This could lead to a denial of service for innocent users. Implement measures to ensure the accuracy of the blacklisting criteria. Regularly review and update the criteria to minimize the chances of false positives.
 2. Transparency and Communication:
-Ethical Concern: Blacklisting activities may lack transparency, leaving users unaware of the reasons for their blocked access.
-Mitigation: Clearly communicate the reasons for blacklisting, providing users with avenues for appeal or clarification. Transparency helps build trust and allows users to understand the security measures in place.
+Blacklisting activities may lack transparency, leaving users unaware of the reasons for their blocked access. Clearly communicate the reasons for blacklisting, providing users with avenues for appeal or clarification. Transparency helps build trust and allows users to understand the security measures in place.
 
-+ Using Historical Database
++ Using Historical Databases -
 The utilization of historical databases in the project raises ethical considerations regarding privacy and consent. It's imperative to ensure that the data used is anonymized, and any potential risks associated with historical information are carefully evaluated. Transparency about the source and nature of historical data should be maintained, and efforts should be made to minimize any unintended consequences or biases that may arise from historical data usage.
 
-+ Collecting User Data
++ Collecting User Data -
 The collection of user data demands ethical considerations regarding informed consent, transparency, and user autonomy. Users should be clearly informed about the data collected, the purpose behind its collection, and should have the option to opt-in or opt-out. Respecting user privacy rights and ensuring data is used responsibly and securely are ethical imperatives.
 
-+ Protecting User Data Based on the User
++ Protecting User Data Based on the User -
 While the intention is to protect user data, ethical concerns arise in determining the criteria for prioritizing user data protection. It's crucial to avoid discrimination and ensure that protection measures are applied fairly and impartially, irrespective of user characteristics. Striking a balance between personalized security and equitable treatment is essential.
 
-+ Data Collection Issues in Forms
++ Data Collection Issues in Forms -
 Ethical considerations in data collection via forms involve transparency in informing users about the necessity of each piece of information. Users should have clarity on how their data will be used and protected. Minimizing the data collected to only what is essential for the system's functionality is ethical practice, preventing unnecessary invasion of user privacy.
 
 + Algorithmic Bias in the Proposed Bot Detection System with reCAPTCHA
@@ -82,6 +92,7 @@ Security measures are paramount to safeguarding user data. Django's security mid
 Continuous monitoring is facilitated through user feedback mechanisms and performance monitoring. Within the Django application, a responsible system administrator can implement a dedicated feedback form or integrate a support ticket system, allowing users to report concerns or biases. Real-time monitoring of the system's performance, supported by Django's built-in tools or external services, ensures prompt addressing of any issues based on ongoing feedback.
 
 In summary, Django, when coupled with the oversight of a responsible system administrator, provides a robust framework to actualize these mitigation strategies. The collaborative integration of these features aligns with the ethical principles of transparency, informed consent, regular audits, stringent security measures, and continuous monitoring throughout the project's development and deployment lifecycle.
+
 # Related work
 
 This chapter includes a broad and detailed review of relevant existing work.
