@@ -163,22 +163,53 @@ Following the exploration of related works, the next chapter, Method of Approach
 
 # Method of approach
 
-This chapter answers the "how" question - how did you complete your project,
-including the overall design of your study, details of the algorithms and tools you
-have used, etc.  Use technical diagrams, equations, algorithms, and paragraphs of text
-to describe the research that you have completed. Be sure to number all figures and
-tables and to explicitly refer to them in your text.
+Django is a high-level web framework for building robust and scalable web applications using the Python programming language. Known for its "batteries-included" philosophy, Django provides a set of built-in tools, conventions, and best practices to simplify and accelerate web development. It follows the Model-View-Controller (MVC) architectural pattern, emphasizing clean code and rapid development.
 
-This should contain:
+The provided list of libraries and packages reflects the diverse ecosystem of tools that complement Django, enhancing its capabilities in various aspects of web development:
 
-* lists
-* with points
-* and more points
-  * possibly subpoints
++ django-admin-honeypot: An extension for Django admin that helps protect against automated login attempts.
++ django-excel-response2: A Django response class to simplify the generation of Excel files from Django views.
++ django-ipware: A utility for retrieving client's IP address, supporting both IPv4 and IPv6.
++ django-otp: A library for adding two-factor authentication to Django applications, enhancing security.
++ gunicorn: A WSGI HTTP server for running Django applications in production, known for its performance and scalability.
++ mysql-connector-python and mysqlclient: Python connectors for MySQL databases, allowing Django to interact seamlessly with MySQL database systems.
++ psutil: A cross-platform library for retrieving information on system utilization (CPU, memory, disks, network).
++ pypng: A pure Python library for reading and writing Portable Network Graphics (PNG) files.
++ qrcode: A library for generating QR codes, enabling the integration of QR code functionality in Django applications.
++ requests: A versatile HTTP library for making HTTP requests, often used for interacting with external APIs.
++ sqlparse: A non-validating SQL parser for Python, aiding in the analysis and manipulation of SQL queries.
++ whitenoise: A Django static file server that serves static files directly from Django, simplifying deployment.
+These libraries collectively extend Django's capabilities, addressing specific needs like authentication, file handling, database connectivity, and more. The Python programming language serves as the foundation for this powerful web development stack, fostering a clean, readable, and maintainable codebase. The combination of Django and its associated libraries empowers developers to create feature-rich web applications efficiently and with a focus on best practices.
 
-For those projects whose implications address social or moral issues (i.e. ethical
-standards, causes, effects), you will want to use this section to describe how you
-actively mitigated or considered these issues.
+The research project leverages Docker, a containerization platform, to encapsulate the Django web application and its dependencies. Docker ensures consistent and reproducible environments across different stages of development, testing, and deployment.
+
+Dockerfile Configuration
+
+A Dockerfile has been crafted to define the Docker image, specifying the necessary configurations for the Python runtime, project dependencies, and execution environment.
+
+Data Privacy and User Consent
+The Django/SQLite3 project for IP tracking and user blocking prioritizes data privacy and user consent. To address ethical concerns related to data handling, the following interventions have been incorporated:
+
+Anonymization:
+
+Personally identifiable information (PII) is handled with utmost care. The system employs anonymization techniques to dissociate IP addresses from specific individuals, ensuring user privacy is maintained.
+
+Fairness and Bias Mitigation
+To mitigate bias and ensure fair treatment of users, the project incorporates the following interventions:
+
+IP Address Diversity:
+
+The system acknowledges the diversity of IP addresses and avoids discriminatory practices. Measures are taken to prevent unjust profiling based on IP addresses, recognizing that individuals sharing an IP address might not necessarily share the same identity or behavior.
+
+Regular Audits:
+
+Periodic audits are conducted to assess the impact of IP tracking on different user groups. This ensures that the system remains fair and unbiased over time, addressing any inadvertent discriminatory effects.
+
+Open Source:
+
+Where applicable, components of the project are open source, allowing scrutiny by the wider community. This fosters transparency and invites external input to identify and rectify ethical concerns.
+
+The Django/SQLite3 project incorporates IPStack, a service for retrieving raw information about IP addresses that visit the site. This integration allows the system to gain insights into the geographical location, network details, and other relevant information associated with each visiting IP address. The project leverages this data to enhance the security measures, enabling the identification and blocking of suspicious IP addresses.
 
 # Experiments
 
@@ -193,7 +224,7 @@ evaluations that involve particular ethical considerations, detail those issues 
 
 ## Evaluation
 
-## Threats to Validity
+## Threats to Validit
 
 # Conclusion
 
