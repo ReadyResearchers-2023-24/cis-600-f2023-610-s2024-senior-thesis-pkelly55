@@ -220,7 +220,7 @@ This command will start the Django web server, and the user can access the site 
 For more access to the site, a superuser can be created by running the command: ```python manage.py createsuperuser```
 This command prompts the user to create a superuser account, providing access to the Django admin site. The superuser can then manage the site's functionalities, including IP tracking, user blocking, and user access management.
 This out of the box functionality that django provides are some of the biggest reasons why the project was started and persued with django as the web framework over other python web framworks like flask.
-Another option to run the project if the dependencies are not working locally, is to use Docker. There is a provided dockerfile that is provided in the Admin folder. The user can build the docker image by running the command: ```docker-compose build ```
+Another option to run the project if the dependencies are not working locally, is to use Docker. There is a provided dockerfile that is provided in the Admin folder. The user can build the docker image by running the command: ```docker-compose build```
 This command builds the docker image, ensuring that all project dependencies are included. Once the image is built, the user can run the docker container by executing: ```docker-compose up```
 This command starts the docker container, and the user can access the site by navigating to the provided URL within Docker desktop.
 
