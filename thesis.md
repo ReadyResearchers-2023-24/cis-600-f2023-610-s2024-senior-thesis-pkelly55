@@ -165,6 +165,7 @@ Following the exploration of related works, the next chapter, Method of Approach
 
 Django is a high-level web framework for building robust and scalable web applications using the Python programming language. Known for its "batteries-included" philosophy, Django provides a set of built-in tools, conventions, and best practices to simplify and accelerate web development. It follows the Model-View-Controller (MVC) architectural pattern, emphasizing clean code and rapid development.
 
+![Project overview](images/project_overview.png)
 The provided list of libraries and packages reflects the diverse ecosystem of tools that complement Django, enhancing its capabilities in various aspects of web development:
 
 + django-admin-honeypot: An extension for Django admin that helps protect against automated login attempts.
@@ -196,15 +197,12 @@ Fairness and Bias Mitigation
 To mitigate bias and ensure fair treatment of users, the project incorporates the following interventions:
 
 IP Address Diversity:
-
 The system acknowledges the diversity of IP addresses and avoids discriminatory practices. Measures are taken to prevent unjust profiling based on IP addresses, recognizing that individuals sharing an IP address might not necessarily share the same identity or behavior.
 
 Regular Audits:
-
 Periodic audits are conducted to assess the impact of IP tracking on different user groups. This ensures that the system remains fair and unbiased over time, addressing any inadvertent discriminatory effects.
 
 Open Source:
-
 Where applicable, components of the project are open source, allowing scrutiny by the wider community. This fosters transparency and invites external input to identify and rectify ethical concerns.
 
 The Django/SQLite3 project incorporates IPStack, a service for retrieving raw information about IP addresses that visit the site. This integration allows the system to gain insights into the geographical location, network details, and other relevant information associated with each visiting IP address. The project leverages this data to enhance the security measures, enabling the identification and blocking of suspicious IP addresses.
@@ -215,7 +213,7 @@ The Django/Postgresql project is hosted on Vercel, a cloud platform for static s
 Usage of Railway:
 Railway was used for my project when I began to host the project online. Options were not available to host online using a Sqlite3 database. Some reasons were given that the data would be reset in 24 hours. This was not a good option for the project. All the data needed to be stable for the Admin to make comparisons. Railway lets the user create an instance of a Postgresql database and gives the database variable in a clean and efficient manner for quick connection to Django. The project was then deployed to Vercel, a cloud platform for static sites and serverless functions. This hosting setup provides a scalable and reliable environment for the Django and Postgresql, enabling efficient access and performance.
 
-Now it comes down to how to run this project. From the github repository Peyton_Kelly_Artifact. The user can clone the repository on their machine. Once the repository is cloned, the user can navigate to the project directory and run commands to have the Django web server stand up. In my artifact there are multiple folders that user can look into and change to experiment with the Django design. The main folder 'Admin', where the manage.py file lives is where the user needs to be in to run: ```python manage.py runserver```
+Now it comes down to how to run this project. From the github repository Peyton_Kelly_Artifact. The user can clone the repository on their machine. Once the repository is cloned, the user can navigate to the project directory and run commands to have the Django web server stand up. First the virtual environment should be started up with ```source venv/bin/activate```. In my artifact there are multiple folders that user can look into and change to experiment with the Django design. The main folder 'Admin', where the manage.py file lives is where the user needs to be in to run: ```python manage.py runserver```
 This command will start the Django web server, and the user can access the site by navigating to the provided URL. The user can then experiment with the site's functionalities, including IP tracking, user blocking, and the integration of IPStack data. The user can also explore the admin site to view the stored IPStack data and manage user access.
 For more access to the site, a superuser can be created by running the command: ```python manage.py createsuperuser```
 This command prompts the user to create a superuser account, providing access to the Django admin site. The superuser can then manage the site's functionalities, including IP tracking, user blocking, and user access management.
@@ -231,12 +229,21 @@ Another experiment was to test out the IPStack API to see if it would be able to
 
 ## Experimental Design
 
-Especially as it pertains to responisble computing, if conducting experiments or
-evaluations that involve particular ethical considerations, detail those issues here.
+When undertaking experiments in the realm of responsible computing, ethical considerations play a pivotal role. One crucial aspect involves IP blocking, where it is imperative to implement these measures responsibly. Blocking specific IP addresses should be approached with caution to avoid unintentionally excluding legitimate users. Regular reviews of blocked IP addresses are essential to mitigate the risk of false positives and ensure fair and equitable access to the web application.
+In the context of IPStack data retrieval, ethical considerations revolve around respecting the terms of service of the IPStack API. Adhering to these terms ensures the ethical use of the service and guards against potential privacy concerns associated with IP address geolocation. It is essential to maintain transparency regarding the collection and storage of this data, providing users with clear information about how their information is handled. When testing the system's response to brute force attacks, ethical practices dictate responsible testing procedures. It is crucial to avoid causing harm to the system or unintentional disruption of service. Additionally, communication with relevant parties, including system administrators or hosting providers, is recommended when such testing might impact other users or external services. User experience testing, within the context of security measures, demands a delicate balance. While enhancing security is paramount, it is equally important to ensure that these measures do not overly inconvenience legitimate users. Responsible computing in this regard requires continuous refinement of security features to strike the right balance between protection and user-friendly access.
+Lastly, ethical considerations extend to data storage and privacy. Transparency in data storage practices, especially concerning IP address information, is paramount. Adherence to data protection regulations and practices that prioritize user privacy underscores the commitment to responsible computing. By addressing these ethical considerations throughout the experiments, the aim is to contribute to the development of a secure, transparent, and user-friendly web application.
 
 ## Evaluation
 
+In evaluating the outcomes of the conducted experiments, several key observations and insights have emerged, shedding light on the performance, security, and user experience aspects of the Django/SQLite3 web application.
+The experiments related to blocking users and implementing IP tracking mechanisms have proven effective in enhancing the security posture of the web application. The system demonstrated the capability to identify and restrict access to unauthorized users based on IP addresses. The use of localhost for initial testing provided a controlled environment, ensuring that the blocking mechanisms were functional without impacting the live deployment. Continuous monitoring and refinement of these blocking measures will be essential to maintain a robust defense against potential threats.
+The integration of the IPStack API for IP address geolocation proved to be a valuable addition to the security architecture. Retrieving raw data from the API and storing it in the database allowed for effective tracking and analysis of IP addresses making requests to the site. The information gathered facilitated informed decisions regarding blocking suspicious IP addresses. This data-driven approach to security enhances the overall resilience of the web application, and its integration into the admin interface provides a practical tool for administrators to assess potential security risks.
+The experiments examining the system's response to brute force attacks revealed a satisfactory level of resilience. The application successfully detected and mitigated repeated login attempts, contributing to a strengthened defense against unauthorized access. Fine-tuning and periodic testing of these mechanisms will be necessary to adapt to evolving security threats and ensure continued effectiveness.
+Evaluation of the user experience during site access indicated that security measures did not significantly impede legitimate users. Striking the right balance between security and user-friendliness is crucial, and the experiments have shown that the implemented measures achieve this equilibrium effectively. Additionally, exploring different deployment options provided valuable insights into the compatibility and performance of the web application on various hosting platforms. These findings will guide informed decisions when selecting the most suitable deployment environment for the live application.
+
 ## Threats to Validity
+
+In the evaluation of the Django/SQLite3 web application experiments, several potential threats to validity were considered to ensure the reliability and generalizability of the results. Internally, efforts were made to maintain consistency in implementation through rigorous code reviews, version control, and documentation. To mitigate external validity threats, the experiments were viewed as a preliminary phase, and plans for further testing in simulated or live production environments were outlined to enhance generalizability. Construct validity concerns were addressed by refining operational definitions for variables and ensuring the accuracy of measurement tools. Conclusion validity was safeguarded by acknowledging the experiments' scope limitations and recommending additional research or testing to cover unexplored scenarios or threats. Ethical considerations were prioritized, with a commitment to addressing unforeseen ethical issues promptly. By addressing these potential threats, the validity of the experimental outcomes was strengthened, providing a solid foundation for decision-making in the development and deployment of the web application.
 
 # Conclusion
 
@@ -247,15 +254,22 @@ details.
 
 ## Summary of Results
 
+In summary, the conducted experiments evaluating the Django/SQLite3 web application yielded valuable insights into its performance, security measures, and user experience. The system showcased robust capabilities in IP tracking, user blocking, and response to brute force attacks. Integration with the IPStack API for geolocation data retrieval provided an effective tool for enhancing security measures. The experiments also demonstrated a thoughtful balance between security enhancements and maintaining a positive user experience. Insights gained from deployment experiments on various platforms, including Heroku, Railway, and Vercel, contributed to informed decisions regarding the application's hosting environment.
+
 ## Future Work
+
+While the experiments provided a comprehensive understanding of the web application's current state, there are avenues for future work. Continuous refinement of security measures, such as exploring advanced IP tracking and blocking strategies, remains a priority. Further testing in live production environments is necessary to validate the generalizability of findings and ensure the system's resilience to real-world scenarios. Additionally, ongoing user feedback and usability studies can contribute to iterative improvements in the overall user experience.
 
 ## Future Ethical Implications and Recommendations
 
 Especially as pertains to the public release or use of your software or methods, what
 unresolved or special issues remain? What recommendations might you make?
 
+Looking ahead, ethical considerations should remain at the forefront of the development and deployment process. As the software progresses towards public release or wider use, it is crucial to address any remaining unresolved ethical issues. Recommendations include thorough documentation of the system's ethical design and usage guidelines, transparent communication with users about data handling practices, and regular reviews of ethical implications as the software evolves. Considering the potential impact on user privacy and the broader community, a proactive approach to ethical considerations ensures responsible and sustainable software development.
+
 ## Conclusions
 
+In conclusion, the experiments conducted to evaluate the Django/SQLite3 web application have provided a foundation for a secure, resilient, and user-friendly system. The positive outcomes in IP tracking, data retrieval, and user experience affirm the effectiveness of implemented measures. The continuous commitment to ethical considerations ensures that as the software evolves and becomes more widely utilized, it aligns with responsible computing practices. The combination of findings from these experiments, ongoing refinements, and ethical considerations positions the web application for a successful and responsible release.
 
 # References
 
