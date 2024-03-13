@@ -212,7 +212,6 @@ The Django/Postgresql project is hosted on Vercel, a cloud platform for static s
 
 Usage of Railway:
 Railway was used for my project when I began to host the project online. Options were not available to host online using a Sqlite3 database. Some reasons were given that the data would be reset in 24 hours. This was not a good option for the project. All the data needed to be stable for the Admin to make comparisons. Railway lets the user create an instance of a Postgresql database and gives the database variable in a clean and efficient manner for quick connection to Django. The project was then deployed to Vercel, a cloud platform for static sites and serverless functions. This hosting setup provides a scalable and reliable environment for the Django and Postgresql, enabling efficient access and performance.
-
 Now it comes down to how to run this project. From the github repository Peyton_Kelly_Artifact. The user can clone the repository on their machine. Once the repository is cloned, the user can navigate to the project directory and run commands to have the Django web server stand up. First the virtual environment should be started up with ```source venv/bin/activate```. In my artifact there are multiple folders that user can look into and change to experiment with the Django design. The main folder 'Admin', where the manage.py file lives is where the user needs to be in to run: ```python manage.py runserver```
 This command will start the Django web server, and the user can access the site by navigating to the provided URL. The user can then experiment with the site's functionalities, including IP tracking, user blocking, and the integration of IPStack data. The user can also explore the admin site to view the stored IPStack data and manage user access.
 For more access to the site, a superuser can be created by running the command: ```python manage.py createsuperuser```
@@ -247,10 +246,13 @@ In the evaluation of the Django/SQLite3 web application experiments, several pot
 
 # Conclusion
 
-Traditionally, this chapter addresses the areas proposed below as sections, although
-not necessarily in this order or organized as offered. However, the last section --
-"Ethical Implcations" is required for this chapter. See the heading below for more
-details.
+
+ChatGPT
+In conclusion, the experiments assessing the Django/SQLite3 web application have delivered valuable insights into its performance, security features, and user experience. The findings demonstrate robust capabilities in IP tracking, user blocking, and response to security threats like brute force attacks. Integration with the IPStack API has enhanced security measures effectively. The experiments also highlighted a delicate balance between security enhancements and user satisfaction.
+
+Looking forward, there are opportunities for further refinement, particularly in advancing security measures and conducting real-world testing. Ethical considerations remain paramount, necessitating thorough documentation, transparent communication with users, and regular ethical reviews.
+
+Overall, these experiments provide a strong foundation for a secure, resilient, and user-friendly system. The commitment to ethical principles ensures responsible software development, positioning the web application for a successful and ethically sound release.
 
 ## Summary of Results
 
