@@ -164,18 +164,18 @@ Django is a high-level web framework for building robust and scalable web applic
 
 The provided list of libraries and packages reflects the diverse ecosystem of tools that complement Django, enhancing its capabilities in various aspects of web development:
 
-+ django-admin-honeypot: An extension for Django admin that helps protect against automated login attempts.
-+ django-excel-response2: A Django response class to simplify the generation of Excel files from Django views.
-+ django-ipware: A utility for retrieving client's IP address, supporting both IPv4 and IPv6.
-+ django-otp: A library for adding two-factor authentication to Django applications, enhancing security.
-+ gunicorn: A WSGI HTTP server for running Django applications in production, known for its performance and scalability.
-+ mysql-connector-python and mysqlclient: Python connectors for MySQL databases, allowing Django to interact seamlessly with MySQL database systems.
-+ psutil: A cross-platform library for retrieving information on system utilization (CPU, memory, disks, network).
-+ pypng: A pure Python library for reading and writing Portable Network Graphics (PNG) files.
-+ qrcode: A library for generating QR codes, enabling the integration of QR code functionality in Django applications.
-+ requests: A versatile HTTP library for making HTTP requests, often used for interacting with external APIs.
-+ sqlparse: A non-validating SQL parser for Python, aiding in the analysis and manipulation of SQL queries.
-+ whitenoise: A Django static file server that serves static files directly from Django, simplifying deployment.
++ django 4.2.5: The core Django framework, providing essential features for building web applications.
++ django-admin-honeypot: An extension for Django admin that helps protect against automated login attempts. The version used is the development branch.
++ django-excel-response2 3.0.6: A Django response class to simplify the generation of Excel files from Django views.
++ django-ipware 6.0.3: A utility for retrieving client's IP address, supporting both IPv4 and IPv6.
++ django-otp 1.3.0: A library for adding two-factor authentication to Django applications, enhancing security.
++ gunicorn 21.2.0: A WSGI HTTP server for running Django applications in production, known for its performance and scalability.
++ psutil 5.9.8: A cross-platform library for retrieving information on system utilization (CPU, memory, disks, network).
++ pypng 0.20220715.0: A pure Python library for reading and writing Portable Network Graphics (PNG) files.
++ qrcode 7.4.2: A library for generating QR codes, enabling the integration of QR code functionality in Django applications.
++ requests 2.31.0: A versatile HTTP library for making HTTP requests, often used for interacting with external APIs.
++ sqlparse 0.4.4: A non-validating SQL parser for Python, aiding in the analysis and manipulation of SQL queries.
++ whitenoise 6.6.0: A Django static file server that serves static files directly from Django, simplifying deployment.
 These libraries collectively extend Django's capabilities, addressing specific needs like authentication, file handling, database connectivity, and more. The Python programming language serves as the foundation for this powerful web development stack, fostering a clean, readable, and maintainable codebase. The combination of Django and its associated libraries empowers developers to create feature-rich web applications efficiently and with a focus on best practices.
 
 The research project leverages Docker, a containerization platform, to encapsulate the Django web application and its dependencies. Docker ensures consistent and reproducible environments across different stages of development, testing, and deployment.
@@ -203,6 +203,9 @@ Where applicable, components of the project are open source, allowing scrutiny b
 
 The Django/SQLite3 project incorporates IPStack, a service for retrieving raw information about IP addresses that visit the site. This integration allows the system to gain insights into the geographical location, network details, and other relevant information associated with each visiting IP address. The project leverages this data to enhance the security measures, enabling the identification and blocking of suspicious IP addresses.
 
+Use of Docker:
+Docker is employed to containerize the Django web application, ensuring portability and consistency across different environments. The Dockerfile defines the project's dependencies and configurations, enabling seamless deployment and execution.
+
 Hosting on Vercel with Railway:
 The Django/Postgresql project is hosted on Vercel, a cloud platform for static sites and serverless functions. Railway, a deployment platform, is used to manage the deployment process with the database, ensuring seamless integration with Vercel.
 
@@ -210,7 +213,7 @@ Usage of Railway:
 Railway was used for my project when I began to host the project online. Options were not available to host online using a Sqlite3 database. Some reasons were given that the data would be reset in 24 hours. This was not a good option for the project. All the data needed to be stable for the Admin to make comparisons. Railway lets the user create an instance of a Postgresql database and gives the database variable in a clean and efficient manner for quick connection to Django. The project was then deployed to Vercel, a cloud platform for static sites and serverless functions. This hosting setup provides a scalable and reliable environment for the Django and Postgresql, enabling efficient access and performance.
 Now it comes down to how to run this project. From the github repository Peyton_Kelly_Artifact. The user can clone the repository on their machine. Once the repository is cloned, the user can navigate to the project directory and run commands to have the Django web server stand up. First the virtual environment should be started up with ```source venv/bin/activate```. In my artifact there are multiple folders that user can look into and change to experiment with the Django design. The main folder 'Admin', where the manage.py file lives is where the user needs to be in to run: ```python manage.py runserver```
 This command will start the Django web server, and the user can access the site by navigating to the provided URL. The user can then experiment with the site's functionalities, including IP tracking, user blocking, and the integration of IPStack data. The user can also explore the admin site to view the stored IPStack data and manage user access.
-For more access to the site, a superuser can be created by running the command: ```python manage.py createsuperuser```
+For more access to the site, a superuser can be created by running the command:```python manage.py createsuperuser```
 This command prompts the user to create a superuser account, providing access to the Django admin site. The superuser can then manage the site's functionalities, including IP tracking, user blocking, and user access management.
 This out of the box functionality that django provides are some of the biggest reasons why the project was started and pursued with django as the web framework over other python web frameworks like flask.
 Another option to run the project if the dependencies are not working locally, is to use Docker. There is a provided dockerfile that is provided in the Admin folder. The user can build the docker image by running the command: ```docker-compose build```
