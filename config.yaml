@@ -2,17 +2,17 @@
 # https://maehr.github.io/academic-pandoc-template/
 
 # Project-specific values
-title: 'Senior Thesis'
-author: 'Student Name'
-date: '22 July 2022'
-firstreader: 'First Reader'
-secondreader: 'Second Reader'
+title: "Secure Lock: An Approach at Protecting Company Data via Filtered IP Specifications"
+author: 'Peyton Kelly'
+date: '3 May 2024'
+firstreader: 'Oliver Bonham-Carter'
+secondreader: 'Gregory M. Kapfhammer'
 logo: 'images/logo'
 
 # Template Values: DO NOT TOUCH
 
 # Bibliography
-csl: https://www.zotero.org/styles/journal-of-the-acm # See https://www.zotero.org/styles for more styles.
+csl: https://cdn.githubraw.com/ReadyResearchers-2023-24/thesis-resources-cdn/main/cdn/journal-of-the-acm.csl # See https://www.zotero.org/styles for more styles.
 bibliography: references.bib # See https://github.com/jgm/pandoc-citeproc/blob/master/man/pandoc-citeproc.1.md for more formats.
 suppress-bibliography: false
 link-citations: true
@@ -27,7 +27,7 @@ toc-title: 'Table of Contents'
 toc: true # Table of contents
 toc_depth: 2
 lof: true # List of figures
-lot: true # List of tables
+lot: false # List of tables
 fontsize: 12pt
 linestretch: 1
 mainfont: # See https://tug.org/FontCatalogue/seriffonts.html for fonts
